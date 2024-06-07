@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  python-app:
+    container_name: python-app
+    working_dir: /app
+    #restart: unless-stopped
+    #tty: true
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+    environment:
+      - TEST_VAR_ENV=test
+    #ports:
+    #  - "5000:5000"
