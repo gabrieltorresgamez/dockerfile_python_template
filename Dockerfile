@@ -1,5 +1,5 @@
 # SELECT THE IMAGE
-FROM python:3.10
+FROM python:3.10-alpine3.20
 
 # SET THE WORKING DIRECTORY
 WORKDIR /app
@@ -10,6 +10,5 @@ COPY . /app
 # INSTALL THE DEPENDENCIES
 RUN pip install -r requirements.txt
 
-# RUN THE main.py FILE
-ENTRYPOINT ["python3.10"]
-CMD ["main.py"]
+# START THE FLASK APP
+ENTRYPOINT ["flask", "run"]

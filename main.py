@@ -1,4 +1,8 @@
-import os
+from flask import Flask
 
-print(os.environ["TEST_VAR_ENV"])
-print("Done!")
+app = Flask(__name__)
+
+
+@app.route("/")
+def hello_world():
+    return "Hello, World!"
