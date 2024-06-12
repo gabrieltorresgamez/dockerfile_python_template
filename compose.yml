@@ -12,7 +12,7 @@ services:
         source: ./
         target: /app
     environment:
-      - FLASK_APP=main.py
+      - FLASK_APP=dockerfile_python_template/main.py
       - FLASK_ENV=development
       - FLASK_RUN_HOST=0.0.0.0
       - FLASK_RUN_PORT=8080

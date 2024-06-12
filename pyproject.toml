@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=70.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dockerfile_python_template"
+version = "0.0.1"
+authors = [
+  { name="Gabriel Torres Gamez", email="mail+github@torres.swiss" },
+]
+description = "Template for building a docker image using docker-compose."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/gabrieltorresgamez/dockerfile_python_template"
+Issues = "https://github.com/gabrieltorresgamez/dockerfile_python_template/issues"
