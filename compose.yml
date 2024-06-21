@@ -1,7 +1,6 @@
 services:
   python-app:
     container_name: python-app
-    working_dir: /app
     #restart: unless-stopped
     #tty: true
     build:
@@ -13,7 +12,7 @@ services:
         target: /app
     environment:
       - FLASK_APP=flask_app
-      - FLASK_ENV=development
+      - FLASK_DEBUG=1
       - FLASK_RUN_HOST=0.0.0.0
       - FLASK_RUN_PORT=8080
     ports:
